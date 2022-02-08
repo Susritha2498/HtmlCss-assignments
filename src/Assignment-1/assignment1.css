@@ -2,6 +2,59 @@
 
 
 .container, .content {
-width: 100%;
-height: 100%;
+width: 900px;
+height: 800px;
+}
+.first, .second{
+    display: grid;
+    grid-template-columns: 450px 450px;
+    width: 450px;
+    height: 400px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+ul{
+    list-style:disc;
+    width: 450px;
+    height: 400px;
+    padding: 30px 0 0 50px
+}
+
+
+.firstl{
+    width: 450px;
+    height: 400px;
+    margin: 5px;
+    }
+.firstr{
+    width: 450px;
+    height: 400px;
+    margin: 5px;
+    }
+
+.secondl{
+    width: 450px;
+    height: 400px;
+    margin: 5px;
+}
+.secondr{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+    height: 400px;
+    margin: 5px;   
+}
+h1{
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    margin-block-start: 170px;
+}
+img{
+width: 450px;
+height: 400px;
 }
