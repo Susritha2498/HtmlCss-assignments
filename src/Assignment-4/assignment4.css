@@ -1,4 +1,36 @@
 /* Our CSS file. */
+body{
+margin:0;
+padding:0;
+}
+
+#container,.content{
+height: 200vh;
+font-family: 'Raleway',sans-serif;
+position: relative;
+}
+
+header{
+height: 10%;
+width:100%;
+background: #6eb1c7;
+color: white;
+position: absolute;
+}
+
+header h1{
+float:left;
+margin-left:15px;
+}
+
+header nav{
+float:right;
+position:absolute;
+top: 8vh;
+right:2vh;
+bottom: 5vh;
+}
+
 
 body{
 margin:0;
@@ -31,6 +63,7 @@ right:2vh;
 bottom: 5vh;
 }
 
+
 li{
 display: inline-block;
 width: max-content;
@@ -47,13 +80,6 @@ position: absolute;
 top:35%;
 bottom:35%;
 left:5%;
-height:30%;
-}
-
-#logo{
-position: absolute;
-top:35%;
-bottom:35%;
 height:30%;
 }
 
@@ -97,7 +123,6 @@ margin-left:44%;
 margin-top: 2%;
 margin-bottom:2%;
 }
-
 
 #hero a{
 margin-top:10px;
@@ -160,4 +185,5 @@ padding-bottom:3%;
 footer a{
 display: block;
 color: white;
-}     
+}
+
