@@ -31,6 +31,39 @@ right:2vh;
 bottom: 5vh;
 }
 
+
+body{
+margin:0;
+padding:0;
+}
+
+#container,.content{
+height: 200vh;
+font-family: 'Raleway',sans-serif;
+position: relative;
+}
+header{
+height: 10%;
+width:100%;
+background: #6eb1c7;
+color: white;
+position: absolute;
+}
+
+header h1{
+float:left;
+margin-left:15px;
+}
+
+header nav{
+float:right;
+position:absolute;
+top:8vh;
+right:2vh;
+bottom: 5vh;
+}
+
+
 li{
 display: inline-block;
 width: max-content;
@@ -153,3 +186,4 @@ footer a{
 display: block;
 color: white;
 }
+
