@@ -5,26 +5,87 @@
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
-	<script src="bundle.js" type="text/javascript"></script>
+	<!-- <script src="bundle.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" href="./assignment6.css">
 </head>
 
 <body>
 	<div id="container">
 
 	<!-- Start your code from here -->
+	<div id="firstCol">
+		<div id="first">
+		<p id="btn1" class="btn"><b>Characters:0</b></p>
+		<p id="btn2" class="btn"><b>Threads:0</b></p>
+		</div>
 
+		<div id="second">
+			<textarea name="inputText" id="input" placeholder="The character limit for each thread is 275."></textarea>
+		</div>
 
+		<button id="btn3" type="submit">Thread</button>
+
+	</div>
+
+	<div id="secondCol">
+		<!-- <div class="thread">
+			<h1>1</h1>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum pariatur doloremque alias debitis velit sunt, quisquam consequatur. Quasi dolor sunt error nemo harum quaerat reiciendis deleniti fugiat. Exercitationem, fugit ex?</p> 
+		</div> -->
+	</div>
 	<!-- End your code -->
 
 	</div>
 
 	<script type="text/javascript">
 	// write your javascript code here
+	let x = document.getElementById('input')
+	x.addEventListener('input',charCount)
+
+	function charCount(){
+		let y = document.getElementById('btn1')
+		y.innerHTML = `<b>Characters: ${(x.value).length}</b>`
+	}
+
+	let button = document.getElementById('btn3')
+	button.addEventListener('click',addContent)
+
+	let addDiv = document.getElementById('secondCol')
+	let i=1
+	function addContent(){
+		let content = document.getElementById('input').value
+		let n = (content.length)
+		if (n==0){
+			alert("Please provide some input")
+			return 
+		}
+		let count = 0
+		let List = []
+		let html = content[0]
+		for(let idx=1;idx<n;idx++){
+			if (count<274){
+				html += content[idx]
+				count+=1
+			}
+			else{
+			List.push(html)
+			html = content[idx]
+			count = 0
+			}
+		}
+		List.push(html)
+		document.getElementById('input').value=''
+		List.forEach(ele=>{
+			addDiv.innerHTML+=`<div class="thread"><h1>${i}</h1><p>${ele}</p></div>`
+			let threadCount = document.getElementById('btn2')
+			threadCount.innerHTML = `<b>Threads: ${i}</b>`
+			i+=1
+		})
+	}
 
 	</script>
 
 </body>
-<script src="assignment6.js"></script>
 <script>
 /* DO NOT EDIT THIS CODE- WRITTERN TO PREVENT CSS CACHING */	  
 	// Get HTML head element
